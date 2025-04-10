@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitoramento</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Monitoramento</h2>
+        
+       
+        <button class="botao" onclick="mostrarSecao('logs-container')">Ver Logs</button>
+
+       
+
+        <div id="logs-container" class="hidden">
+            <h3>Logs do Servidor</h3>
+            <div id="mensagens">
+                <p>Nenhuma mensagem recebida ainda.</p>
+            </div>
+            <button class="botao" onclick="resetarMensagens()">Resetar Mensagens</button>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
